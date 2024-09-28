@@ -57,9 +57,9 @@ def inférence(Age,DailyRate,HourlyRate,Revenu_mensuel,MonthlyRate,NumCompaniesW
 
 # Convertir les colonnes booléennes en entiers
     df_dummies[bool_columns] = df_dummies[bool_columns].astype(int)
-    data_final1 = check_array(df_dummies, dtype=np.float64)
+    #data_final1 = check_array(df_dummies, dtype=np.float64)
 
-    pred=model.predict(data_final1)
+    pred=model.predict(df_dummies)
     #st.write(data_final)
 
     return pred
